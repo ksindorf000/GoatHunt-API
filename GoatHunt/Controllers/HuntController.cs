@@ -24,15 +24,15 @@ namespace GoatHunt.Controllers
         /*************************
          * Get Single Hunt
          *************************/
-         [ResponseType(typeof(Hunt))]
+        [ResponseType(typeof(Hunt))]
         public IHttpActionResult Get(int? id)
         {
-            Hunt instance = db.Hunts.Find(id);
-
             if (id == null)
             {
                 return BadRequest();
             }
+
+            Hunt instance = db.Hunts.Find(id);
 
             if (instance == null)
             {

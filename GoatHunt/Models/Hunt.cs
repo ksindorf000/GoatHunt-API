@@ -9,7 +9,8 @@ namespace GoatHunt.Models
     public class Hunt
     {
         [Key]
-        public int HuntNumber { get; set; }
+        public int Id { get; set; }
+        public string HuntNumber { get; set; }
         public string HuntName { get; set; }
         public string Type { get; set; }
         public string Permits { get; set; }

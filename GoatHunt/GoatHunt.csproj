@@ -129,7 +129,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <EmbeddedResource Include="Migrations\201702211938260_InitialWithHuntTable.resx">
+      <DependentUpon>201702211938260_InitialWithHuntTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702211942019_AddCSVData.resx">
+      <DependentUpon>201702211942019_AddCSVData.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -170,9 +175,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201702211850025_Initial.cs" />
-    <Compile Include="Migrations\201702211850025_Initial.Designer.cs">
-      <DependentUpon>201702211850025_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201702211938260_InitialWithHuntTable.cs" />
+    <Compile Include="Migrations\201702211938260_InitialWithHuntTable.Designer.cs">
+      <DependentUpon>201702211938260_InitialWithHuntTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702211942019_AddCSVData.cs" />
+    <Compile Include="Migrations\201702211942019_AddCSVData.Designer.cs">
+      <DependentUpon>201702211942019_AddCSVData.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Hunt.cs" />
@@ -206,6 +215,7 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <Content Include="App_Data\Data.csv" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -227,11 +237,6 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201702211850025_Initial.resx">
-      <DependentUpon>201702211850025_Initial.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

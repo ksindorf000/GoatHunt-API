@@ -3,7 +3,7 @@ namespace GoatHunt.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Initial : DbMigration
+    public partial class InitialWithHuntTable : DbMigration
     {
         public override void Up()
         {
@@ -11,7 +11,8 @@ namespace GoatHunt.Migrations
                 "dbo.Hunts",
                 c => new
                     {
-                        HuntNumber = c.Int(nullable: false, identity: true),
+                        Id = c.Int(nullable: false, identity: true),
+                        HuntNumber = c.String(),
                         HuntName = c.String(),
                         Type = c.String(),
                         Permits = c.String(),
@@ -20,7 +21,7 @@ namespace GoatHunt.Migrations
                         AverageDays = c.String(),
                         PercentSuccess = c.String(),
                     })
-                .PrimaryKey(t => t.HuntNumber);
+                .PrimaryKey(t => t.Id);
             
         }
         
